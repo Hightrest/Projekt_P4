@@ -1,0 +1,36 @@
+﻿<Window x:Class="Projekt_PIV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_PIV"
+        xmlns:views="clr-namespace:Projekt_PIV.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Background="Gray" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Menu DockPanel.Dock="Top" Background="LightSkyBlue">
+            <MenuItem Header="Wyświetl">
+                <MenuItem Header="Fakturę" Click="ListFaktury_Click"/>
+                <MenuItem Header="Zamówienia" Click="ListZamowienia_Click"/>
+                <MenuItem Header="Klienta" Click="ListKlienci_Click"/>
+                <MenuItem Header="Pracownika" Click="ListPracownicy_Click"/>
+                <MenuItem Header="Produkt" Click="ListProdukty_Click"/>
+                <MenuItem Header="Dane Adresowe" Click="ListDaneAdresowe_Click"/>
+            </MenuItem>
+            <MenuItem Header="Dodaj">
+                <MenuItem Header="Fakturę" Click="AddFaktury_Click"/>
+                <MenuItem Header="Zamówienia" Click="AddZamowienia_Click"/>
+                <MenuItem Header="Klienta" Click="AddKlienta_Click"/>
+                <MenuItem Header="Pracownika" Click="AddPracownika_Click"/>
+                <MenuItem Header="Produkt" Click="AddProdukty_Click"/>
+                <MenuItem Header="Dane Adresowe" Click="AddDaneAdresowe_Click"/>
+            </MenuItem>
+        </Menu>
+        <Frame x:Name="CurrentForm" Margin="0,20,0,0" NavigationUIVisibility="Hidden" Loaded="CurrentForm_Loaded"/>
+
+    </Grid>
+</Window>

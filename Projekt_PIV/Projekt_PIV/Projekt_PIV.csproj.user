@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\AddDaneAdresowe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddFaktury.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddKlienta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddPracownika.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddProdukty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddZamowienia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListDaneAdresowe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListFaktury.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListKlienci.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListPracownicy.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListProdukty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListZamowienia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddDaneAdresowe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddFaktury.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddKlienta.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddPracownika.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddProdukty.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddZamowienia.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListDaneAdresowe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListFaktury.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListKlienci.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListPracownicy.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListProdukty.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListZamowienia.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,50 @@
+﻿<Page x:Class="Projekt_PIV.Views.ListDaneAdresowe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projekt_PIV.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListDaneAdresowe">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="1" Margin="4,0,0,0" Content="ID Adresu: " HorizontalAlignment="Right"/>
+        <Label Grid.Column="1" Grid.Row="1" Margin="250,0,0,0" Content="0 - wyświetla wszystkie dane adresowe" HorizontalAlignment="Left"/>
+        <TextBox x:Name="Id_Adresu" PreviewTextInput="NumberValidationTextBox" Grid.Column="1" Grid.Row="1" Margin="4" Text="{Binding Id_Adresu, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="200"/>
+
+        <Button Grid.Column="1" Grid.Row="4" Margin="4" Content="Szukaj faktury" Command="{Binding ListDaneAdresoweClick}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <ListView x:Name="Dane_Adresowe" Margin="10,99,10,-205"  Grid.Row="4" ItemsSource="{Binding FindDaneAdresowe}" Grid.ColumnSpan="2" RenderTransformOrigin="1,0" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListView.View>
+
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Faktury">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_Adresu, UpdateSourceTrigger=PropertyChanged}" Header="ID Adresu" Width="50"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Ulica, UpdateSourceTrigger=PropertyChanged}" Header="Ulica" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Adres, UpdateSourceTrigger=PropertyChanged}" Header="Adres" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Miasto, UpdateSourceTrigger=PropertyChanged}" Header="Miasto" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Kod_pocztowy, UpdateSourceTrigger=PropertyChanged}" Header="Kod pocztowy" Width="150"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Kraj, UpdateSourceTrigger=PropertyChanged}" Header="Kraj" Width="150"/>
+                </GridView>
+
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

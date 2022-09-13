@@ -1,0 +1,43 @@
+﻿<Page x:Class="Projekt_PIV.Views.AddFaktury"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projekt_PIV.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddFaktury">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="1" Content="Id Klienta" HorizontalAlignment="Left" Margin="4" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Id Pracownika" HorizontalAlignment="Left" Margin="4" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="Id Zamówienia" HorizontalAlignment="Left" Margin="4" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="4" Content="Termin płatności" HorizontalAlignment="Left" Margin="4" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="5" Content="Kwota do zapłaty" HorizontalAlignment="Left" Margin="4" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="6" Content="Termin wpłaty" HorizontalAlignment="Left" Margin="4" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="Id_Klienta" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="4" Text="{Binding Id_Klienta, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+        <TextBox x:Name="Id_Pracownika" Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Left" Margin="4" Text="{Binding Id_Pracownika, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+        <TextBox x:Name="Id_Zamówienia" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="4" Text="{Binding Id_Zamówienia , UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+        <TextBox x:Name="Termin_płatności" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="4" Text="{Binding Termin_płatności , UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+        <TextBox x:Name="Całkowita_kwota_do_zapłaty" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Margin="4" Text="{Binding Całkowita_kwota_do_zapłaty , UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+        <TextBox x:Name="Termin_wpłaty" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="4" Text="{Binding Termin_wpłaty , UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+
+        <Button Grid.Column="1" Grid.Row="7" Margin="4" Content="Dodaj fakturę" Command="{Binding AddFaktureClick}" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+    </Grid>
+</Page>

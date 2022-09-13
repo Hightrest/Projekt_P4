@@ -1,0 +1,52 @@
+﻿<Page x:Class="Projekt_PIV.Views.ListFaktury"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projekt_PIV.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListFaktury">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="1" Margin="4,0,0,0" Content="ID Faktury: " HorizontalAlignment="Right"/>
+        <Label Grid.Column="1" Grid.Row="1" Margin="250,0,0,0" Content="0 - wyświetla wszystkie faktury" HorizontalAlignment="Left"/>
+        <TextBox x:Name="Id_Faktury" PreviewTextInput="NumberValidationTextBox" Grid.Column="1" Grid.Row="1" Margin="4" Text="{Binding Id_Faktury, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="200"/>
+
+        <Button Grid.Column="1" Grid.Row="4" Margin="4" Content="Szukaj faktury" Command="{Binding ListFakturyClick}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <ListView x:Name="Faktury" Margin="10,99,10,-205"  Grid.Row="4" ItemsSource="{Binding FindFaktury}" Grid.ColumnSpan="2" RenderTransformOrigin="1,0" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListView.View>
+
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Faktury">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_Faktury, UpdateSourceTrigger=PropertyChanged}" Header="ID" Width="50"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_Klienta, UpdateSourceTrigger=PropertyChanged}" Header="Klient" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_Pracownika, UpdateSourceTrigger=PropertyChanged}" Header="Pracownik" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_Zamówienia, UpdateSourceTrigger=PropertyChanged}" Header="Zamówinia" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Termin_płatności, UpdateSourceTrigger=PropertyChanged}" Header="Termin płatniści" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Całkowita_kwota_do_zapłaty, UpdateSourceTrigger=PropertyChanged}" Header="Całkowita kowta do zapłaty" Width="150"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Termin_wpłaty, UpdateSourceTrigger=PropertyChanged}" Header="Data wpłaty" Width="150"/>
+                </GridView>
+
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>
